@@ -5,7 +5,7 @@ perform unary, client streaming, server streaming and full duplex RPCs.
 
 Following Tutorial: [gRPC Basics: Go](https://grpc.io/docs/tutorials/basic/go.html).
 
-See the definition of the route guide service in [route_guide.proto](route_guide/route_guide.proto).
+See the definition of the route guide service in [route_guide.proto](routeguide/route_guide.proto).
 
 ## Run the sample code
 
