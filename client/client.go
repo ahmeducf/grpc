@@ -29,7 +29,8 @@ import (
 	"log"
 	"math/rand"
 	"time"
-
+	
+	"google.golang.org/grpc/credentials/insecure"
 	pb "github.com/ahmeducf/grpc-route-guide/routeguide"
 	"google.golang.org/grpc"
 )
@@ -149,7 +150,7 @@ func randomPoint(r *rand.Rand) *pb.Point {
 func main() {
 	flag.Parse()
 
-	conn, err := grpc.Dial(*serverAddr)
+	conn, err := grpc.Dial(*serverAddr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatalf("fail to dial: %v", err)
 	}
